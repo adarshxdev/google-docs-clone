@@ -52,6 +52,16 @@ git branch -d feature/old-branch
 ### First Commit
 git add .
 git commit -m "chore: initialize Next.js project with Git"
-git push -u origin main
+#### Resolve ESLint warnings or errors
+npm run lint
+<!-- Add the below line to scripts in package.json -->
+"test": "echo \"No tests configured\" && exit 0"
+
+git push -u origin master
+
+## Add Editor to the application
+git checkout -b feature/add-editor
+
+npm install @tiptap/react@2.10.2 @tiptap/pm@2.10.2 @tiptap/starter-kit@2.10.2 --legacy-peer-deps
 
 
